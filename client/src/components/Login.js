@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import axios from "axios";
 
 const Login = ({history}) => {
@@ -35,8 +35,34 @@ const Login = ({history}) => {
 
   return (
     <>
-      <h1>Welcome to the Bubble App!</h1>
-      <p>Build a login page here</p>
+      <div>
+      <div>
+      <h1>My Bubbles...!</h1>
+      </div>
+
+      <form onSubmit={handleSubmit}>
+
+        <input
+          type="text"
+          name="username"
+          placeholder="username"
+          onChange={handleChange}
+          value={user.username}
+        />
+
+        <input
+          type="password"
+          name="password"
+          placeholder="password"
+          onChange={handleChange}
+          value={user.password}
+        />
+
+        <button type="submit">Log In</button>
+
+      </form>
+      
+      </div>
     </>
   );
 };
